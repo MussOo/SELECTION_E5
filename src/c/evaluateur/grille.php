@@ -31,7 +31,7 @@ if(isset($_GET['updategrille'])){
 
         $Note = 0;
     
-        if (isset($_POST['P']) and $_POST["P"] == "PRO (08)") {
+        if (isset($_POST['P']) and $_POST["P"] == "Pro (08)") {
             $Note = $Note + 8;
         } elseif (isset($_POST['P']) and $_POST["P"] == "S/ES (12)") {
             $Note = $Note + 12;
@@ -53,14 +53,15 @@ if(isset($_GET['updategrille'])){
         }
     
     
-        if (isset($_POST['AB']) and $_POST["AB"] == "OUI") {
-            $Note = $Note -  1;
-        } elseif (isset($_POST['AB']) and $_POST["AB"] == "NON") {
+        if (isset($_POST['AB']) and $_POST["AB"] == "OUI (-2)") {
+            $Note = $Note - 2;
+        } elseif (isset($_POST['AB']) and $_POST["AB"] == "NON (+1)") {
             $Note = $Note + 1;
         }
     
     
         if (isset($_POST['ATT']) and $_POST["ATT"] == "OUI (Dossier refusé)") {
+
         } elseif (isset($_POST['ATT']) and $_POST["ATT"] == "NON (+1)") {
             $Note = $Note + 1;
         }
@@ -68,8 +69,8 @@ if(isset($_GET['updategrille'])){
     
         if (isset($_POST['ES']) and $_POST["ES"] == "OUI (+1)") {
             $Note = $Note + 1;
-        } elseif (isset($_POST['ES']) and $_POST["ES"] == "NON (-1)") {
-            $Note = $Note - 1;
+        } elseif (isset($_POST['ES']) and $_POST["ES"] == "NON (-0)") {
+            $Note = $Note - 0;
         }
     
     
@@ -85,13 +86,13 @@ if(isset($_GET['updategrille'])){
         }
     
     
-        if (isset($_POST['APP']) and $_POST["APP"] == "Bien (+2)") {
+        if (isset($_POST['AP']) and $_POST["AP"] == "Bien (+2)") {
             $Note = $Note + 2;
-        } elseif (isset($_POST['APP']) and $_POST["APP"] == "Assez Bien (+1)") {
+        } elseif (isset($_POST['AP']) and $_POST["AP"] == "Assez Bien (+1)") {
             $Note = $Note + 1;
-        } elseif (isset($_POST['APP']) and $_POST["APP"] == "insuffisant (-1)") {
+        } elseif (isset($_POST['AP']) and $_POST["AP"] == "insuffisant (-1)") {
             $Note = $Note - 1;
-        } elseif (isset($_POST['APP']) and $_POST["APP"] == "Negative (-2)") {
+        } elseif (isset($_POST['AP']) and $_POST["APP"] == "Negative (-2)") {
             $Note = $Note - 2;
         }
         
@@ -111,7 +112,7 @@ if(isset($_GET['updategrille'])){
                 "Nom" => htmlspecialchars($_POST['Nom']),
                 "Prenom" => htmlspecialchars($_POST['Prenom']),
                 "point_bac" => htmlspecialchars($_POST['P']),
-                "point_travail_serieux" => htmlspecialchars($_POST['TS']),
+                "point_travail_serieux" => htmlspecialchars($_POST['APP']),
                 "point_absence" => htmlspecialchars($_POST['AB']),
                 "point_attitude" => htmlspecialchars($_POST['ATT']),
                 "point_etude_superieure" => htmlspecialchars($_POST['ES']),
@@ -147,7 +148,7 @@ if(isset($_GET['CreateGrille'])){
         
     $Note = 0;
 
-    if (isset($_POST['P']) and $_POST["P"] == "PRO (08)") {
+    if (isset($_POST['P']) and $_POST["P"] == "Pro (08)") {
         $Note = $Note + 8;
     } elseif (isset($_POST['P']) and $_POST["P"] == "S/ES (12)") {
         $Note = $Note + 12;
@@ -159,22 +160,17 @@ if(isset($_GET['CreateGrille'])){
         $Note = $Note + 5;
     }
 
-
-
-
     if (isset($_POST['TS']) and $_POST["TS"] == "OUI (+1)") {
         $Note = $Note + 1;
     } elseif (isset($_POST['TS']) and $_POST["TS"] == "NON (-1)") {
         $Note = $Note - 1;
     }
 
-
-    if (isset($_POST['AB']) and $_POST["AB"] == "OUI") {
-        $Note = $Note -  1;
-    } elseif (isset($_POST['AB']) and $_POST["AB"] == "NON") {
+    if (isset($_POST['AB']) and $_POST["AB"] == "OUI (-2)") {
+        $Note = $Note -  2;
+    } elseif (isset($_POST['AB']) and $_POST["AB"] == "NON (+1)") {
         $Note = $Note + 1;
     }
-
 
     if (isset($_POST['ATT']) and $_POST["ATT"] == "OUI (Dossier refusé)") {
     } elseif (isset($_POST['ATT']) and $_POST["ATT"] == "NON (+1)") {
@@ -184,20 +180,8 @@ if(isset($_GET['CreateGrille'])){
 
     if (isset($_POST['ES']) and $_POST["ES"] == "OUI (+1)") {
         $Note = $Note + 1;
-    } elseif (isset($_POST['ES']) and $_POST["ES"] == "NON (-1)") {
-        $Note = $Note - 1;
-    }
-
-
-
-    if (isset($_POST['APP']) and $_POST["APP"] == "Bien (+2)") {
-        $Note = $Note + 2;
-    } elseif (isset($_POST['APP']) and $_POST["APP"] == "Assez Bien (+1)") {
-        $Note = $Note + 1;
-    } elseif (isset($_POST['APP']) and $_POST["APP"] == "insuffisant (-1)") {
-        $Note = $Note - 1;
-    } elseif (isset($_POST['APP']) and $_POST["APP"] == "Negative (-2)") {
-        $Note = $Note - 2;
+    } elseif (isset($_POST['ES']) and $_POST["ES"] == "NON (-0)") {
+        $Note = $Note - 0;
     }
 
 
@@ -210,7 +194,17 @@ if(isset($_GET['CreateGrille'])){
     } elseif (isset($_POST['APP']) and $_POST["APP"] == "Negative (-2)") {
         $Note = $Note - 2;
     }
-    
+
+    if (isset($_POST['AP']) and $_POST["AP"] == "Bien (+2)") {
+        $Note = $Note + 2;
+    } elseif (isset($_POST['AP']) and $_POST["AP"] == "Assez Bien (+1)") {
+        $Note = $Note + 1;
+    } elseif (isset($_POST['AP']) and $_POST["AP"] == "insuffisant (-1)") {
+        $Note = $Note - 1;
+    } elseif (isset($_POST['AP']) and $_POST["AP"] == "Negative (-2)") {
+        $Note = $Note - 2;
+    }
+
     
     if (isset($_POST['LM']) and $_POST["LM"] == "Bien (+2)") {
         $Note = $Note + 2;

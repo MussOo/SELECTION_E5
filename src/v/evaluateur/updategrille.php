@@ -40,39 +40,38 @@ require_once('src/v/global/header.php')
                                     <div>
                                         <label for="1">Provenance:</label>
                                         <span> ancienne valeur : '. $grille->get("point_bac") . '</span>
-                                        <select name="P" id="1" value="'. $grille->get("point_bac") . '">
-                                            <option value="">--Please choose an option--</option>
-                                            <option value="Pro (08)">Pro (08)</option>
-                                            <option value="S/ES (12)">S/ES (12)</option>
-                                            <option value="L (09)">L (09)</option>
-                                            <option value="STMG (10)">STMG (10)</option>
-                                            <option value="Autres (05)">Autres (05)</option>
+                                        <select name="P" id="1">
+                                        <option value="">--Please choose an option--</option>
+                                        <option value="Pro (08)">Pro (08)</option>
+                                        <option value="S/ES (12)">S/ES (12)</option>
+                                        <option value="L (09)">L (09)</option>
+                                        <option value="STMG (10)">STMG (10)</option>
+                                        <option value="Autres (05)">Autres (05)</option>
                                         </select>
                             
                                         <label for="2">Travail serieux:</label>
                                         <span> ancienne valeur : '. $grille->get("point_travail_serieux") . '</span>
                                         <select name="TS" id="2">
-                                            <option value="">--Please choose an option--</option>
-                                            <option value="OUI (+1)">OUI (+1)</option>
-                                            <option value="NON (-1)">NON (-1)</option>
+                                        <option value="">--Please choose an option--</option>
+                                        <option value="OUI (+1)">OUI (+1)</option>
+                                        <option value="NON (-1)">NON (-1)</option>
                                         </select>
                                     </div>
                                     <div>
                                         <label for="3">Absence:</label>
                                         <span> ancienne valeur : '. $grille->get("point_absence") . '</span>
                                         <select name="AB" id="3">
-                                            <option value="">--Please choose an option--</option>
-                                            <option value="OUI (+1)">OUI (+1)</option>
-                                            <option value="NON (-1)">NON (-1)</option>
-                                        </select>
+                                        <option value="">--Please choose an option--</option>
+                                        <option value="OUI (-2)">OUI (-2)</option>
+                                        <option value="NON (+1)">NON (+1)</option>
+                                                                                </select>
                             
                                         <label for="4">Attitude:</label>
                                         <span> ancienne valeur : '. $grille->get("point_attitude") . '</span>
                                         <select name="ATT" id="4">
-                                            <option value="">--Please choose an option--</option>
-                                            <option value="OUI (Dossier refusé)">OUI (Dossier refusé)</option>
-                                            <option value="NON (+1)">NON (+1)</option>
-                                        </select>
+                                        <option value="">--Please choose an option--</option>
+                                        <option value="OUI (Dossier refusé)">OUI (Dossier refusé)</option>
+                                        <option value="NON (+1)">NON (+1)</option>                                        </select>
                                     </div>
                                 </div>
 
@@ -81,41 +80,40 @@ require_once('src/v/global/header.php')
                                         <label for="1">Etude superieur:</label>
                                         <span> ancienne valeur : '. $grille->get("point_etude_superieure") . '</span>
                                         <select name="ES" id="1">
-                                            <option value="">--Please choose an option--</option>
-                                            <option value="OUI (+1)">OUI (+1)</option>
-                                            <option value="NON (-1)">NON (-1)</option>
-                                        </select>
+                                        <option value="">--Please choose an option--</option>
+                                        <option value="OUI (+1)">OUI (+1)</option>
+                                        <option value="NON (-0)">NON (-0)</option>                                        </select>
                             
                                         <label for="2">Avis Professeur Principal:</label>
                                         <span> ancienne valeur : '. $grille->get("point_avis_PP") . '</span>
                                         <select name="APP" id="2">
-                                            <option value="">--Please choose an option--</option>
-                                            <option value="Bien (+2)">Bien (+2)</option>
-                                            <option value="Assez Bien (+1)">Assez Bien (+1)</option>
-                                            <option value="insuffisant (-1)">insuffisant (-1)</option>
-                                            <option value="Negative (-2)">Negative (-2)</option>
-                                        </select>
+                                        <option value="">--Please choose an option--</option>
+                                        <option value="Bien (+2)">Bien (+2)</option>
+                                        <option value="Assez Bien (+1)">Assez Bien (+1)</option>
+                                        <option value="insuffisant (-1)">insuffisant (-1)</option>
+                                        <option value="Negative (-2)">Negative (-2)</option>
+                                                                </select>
                                     </div>
                                     <div>
                                         <label for="3">Avis Proviseur:</label>
                                         <span> ancienne valeur : '. $grille->get("point_avis_proviseur") . '</span>
                                         <select name="AP" id="3">
-                                            <option value="">--Please choose an option--</option>
-                                            <option value="Bien (+2)">Bien (+2)</option>
-                                            <option value="Assez Bien (+1)">Assez Bien (+1)</option>
-                                            <option value="insuffisant (-1)">insuffisant (-1)</option>
-                                            <option value="Negative (-2)">Negative (-2)</option>
-                                        </select>
+                                        <option value="">--Please choose an option--</option>
+                                        <option value="Bien (+2)">Bien (+2)</option>
+                                        <option value="Assez Bien (+1)">Assez Bien (+1)</option>
+                                        <option value="insuffisant (-1)">insuffisant (-1)</option>
+                                        <option value="Negative (-2)">Negative (-2)</option>
+                                                                </select>
                             
                                         <label for="4">Lettre de Motivation:</label>
                                         <span> ancienne valeur : '. $grille->get("point_lettre_motivation") . '</span>
                                         <select name="LM" id="4">
-                                            <option value="">--Please choose an option--</option>
-                                            <option value="Bien (+2)">Bien (+2)</option>
-                                            <option value="Assez Bien (+1)">Assez Bien (+1)</option>
-                                            <option value="insuffisant (-1)">insuffisant (-1)</option>
-                                            <option value="Negative (-2)">Negative (-2)</option>
-                                        </select>
+                                        <option value="">--Please choose an option--</option>
+                                        <option value="Bien (+2)">Bien (+2)</option>
+                                        <option value="Assez Bien (+1)">Assez Bien (+1)</option>
+                                        <option value="insuffisant (-1)">insuffisant (-1)</option>
+                                        <option value="Negative (-2)">Negative (-2)</option>
+                                                                </select>
                                     </div>
                             
                                     <div>

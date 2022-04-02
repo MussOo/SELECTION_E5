@@ -52,7 +52,7 @@ if(isset($_POST['AjoutUser'])){
         "mdp" => htmlspecialchars($_POST['mot_de_passe']),
         "type_de_compte" => htmlspecialchars($_POST['type_de_compte']),
     ));
-    $UserManager->AddUser($AddUser,$otp); // fait 
+    $UserManager->AddUser($AddUser); // fait 
 }
     
 

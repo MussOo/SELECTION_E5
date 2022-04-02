@@ -31,7 +31,8 @@ require_once('src/v/global/header.php')
     </div>
 
 </div>
-    <div>
+<div></div>
+    <div>  
         <div>
             <label for="1">Provenance:</label>
 
@@ -56,8 +57,8 @@ require_once('src/v/global/header.php')
 
             <select name="AB" id="3">
                 <option value="">--Please choose an option--</option>
-                <option value="OUI (+1)">OUI (+1)</option>
-                <option value="NON (-1)">NON (-1)</option>
+                <option value="OUI (-2)">OUI (-2)</option>
+                <option value="NON (+1)">NON (+1)</option>
             </select>
 
             <label for="4">Attitude:</label>
@@ -77,7 +78,7 @@ require_once('src/v/global/header.php')
             <select name="ES" id="1">
                 <option value="">--Please choose an option--</option>
                 <option value="OUI (+1)">OUI (+1)</option>
-                <option value="NON (-1)">NON (-1)</option>
+                <option value="NON (-0)">NON (-0)</option>
             </select>
 
             <label for="2">Avis Professeur Principal:</label>

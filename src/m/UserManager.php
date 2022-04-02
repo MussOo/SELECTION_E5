@@ -48,17 +48,14 @@
                     header('Location: ?');
         }
 
-        public function AddUser($data,$otp){
+        public function AddUser($data){
 
-            $chl = $otp->getSecret(); 
-            
-            $req = $this->db->prepare("INSERT INTO `utilisateur`(`identifiant`, `mdp`, `type_de_compte`, `chl`) VALUES (:identifiant,:mdp,:type_de_compte,:chl)");
+            $req = $this->db->prepare("INSERT INTO `utilisateur`(`identifiant`, `mdp`, `type_de_compte`) VALUES (:identifiant,:mdp,:type_de_compte)");
             
             $req->execute(array(
             ":identifiant" => $data->get("identifiant"),
             ":mdp" => $data->get("mdp"),
-            ":type_de_compte" => $data->get("type_de_compte"),
-            ":chl" => $chl
+            ":type_de_compte" => $data->get("type_de_compte")
             )); 
 
                     header('Location: ?');
