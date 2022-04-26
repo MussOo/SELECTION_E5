@@ -17,7 +17,6 @@
     <body>
         <form class="formulaire" method="post" action="index.php?Connexion=true">
             <div>
-
                 <div>
                     Nom d'utilisateur : <br>
                     <input name="identifiant" type="text">
@@ -38,6 +37,35 @@
                 </div>
             </div>
         </form>
+         <br>
+        <form class="formulaire" method="GET" >
+            <div>
+                <div>
+                    ID Candidat : <br>
+                    <input name="id_candidat" type="text">
+                </div>
+                <div id="error_idcandidat" none>
+                    <p style="color: red;">Votre dossier n'a pas encore été traité</p>
+                </div>
+                <div>
+                    <input type="submit" name="id_candidat_form">
+                </div>
+            </div>
+        </form>
     </body>
+<script>
+    var currentLocation = window.location.search;
+    
+    document.getElementById("error_idcandidat").style.display = "none";
+    if(currentLocation == '?error_idcandidat'){
+        
+        document.getElementById("error_idcandidat").style.display = "block";
+        setTimeout(function() {
+            
+            document.location.href="?";
+            
+        }, 1500);
 
+    }
+</script>
 </html>

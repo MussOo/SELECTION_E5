@@ -15,6 +15,7 @@ require_once('src/v/global/header.php')
 </style>
 <h1 style="text-align: center;">Espace Administrateur </h1>
 
+
 <table class="situations" style="width: 100%;border: 1px solid black;border-collapse: collapse;">
     <tr class="topLine">
         <td class="situations">identifiant</td>

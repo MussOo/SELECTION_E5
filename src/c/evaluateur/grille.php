@@ -1,6 +1,6 @@
 <?php 
 
-require("src/m/Grille.php");
+
 
 $db=connectDB();
 

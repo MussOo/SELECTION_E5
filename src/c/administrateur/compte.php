@@ -1,7 +1,6 @@
 <?php 
 $db=connectDB();
 
-
 $UserManager=new UserManager($db);
 
 /// PAGE ACCUEIL ///

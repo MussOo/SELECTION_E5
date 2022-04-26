@@ -36,6 +36,27 @@
             }
         }
 
+        public function GetgrillebyIdcandidat($Idcandidat){
+
+            $req = $this->db->prepare("SELECT * FROM grille WHERE Numero_Candidat = :id ");
+                    $req->execute(array(
+                    ":id" => $Idcandidat->get("id")
+                    )); 
+
+            while ($data = $req->fetch()) {
+                $grille[] = new Grille($data);
+            }
+
+            if(isset($grille)){
+                return $grille;
+            }else{
+                
+                ?>
+                <script>document.location.href="?error_idcandidat"; </script>
+                <?php 
+            }
+        }
+
     public function Creategrille($grille){
 
         $req = $this->db->prepare('INSERT INTO Grille(Nom, Prenom, point_bac, point_travail_serieux, point_absence, point_attitude, point_etude_superieure, point_avis_PP, point_avis_proviseur, point_lettre_motivation, remarque, statut_dossier, total_point, Numero_candidat) VALUES(:Nom, :Prenom, :point_bac, :point_travail_serieux, :point_absence, :point_attitude, :point_etude_superieure, :point_avis_PP, :point_avis_proviseur, :point_lettre_motivation, :remarque, :statut_dossier, :total_point, :Numero_Candidat)');

@@ -6,7 +6,6 @@
 
     $db = connectDB();
     $userManager = new UserManager($db);
-
     $listUsers = $userManager->getList();
 
 
@@ -42,6 +41,7 @@ if(isset($_GET['deconnexion'])){ // deconnexion
         $currentUser = $dataUser["currentUser"];
 
         if($found === false){
+
             unset($currentUser) ;
             session_destroy();
             header('Location: ?');
@@ -52,12 +52,13 @@ if(isset($_GET['deconnexion'])){ // deconnexion
 
         header('Location: ?');
 
-    }else{
-
+    }elseif(!$_GET OR isset($_GET['error_idcandidat'])){
         include("src/v/global/authpage.php");
+    }if(isset($_GET['id_candidat_form'])){
         
+        include("src/v/global/id_candidat.php");
+    
     }
-
 
     
 
